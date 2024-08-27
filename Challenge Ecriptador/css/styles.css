@@ -1,0 +1,305 @@
+/* formato de letras */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* reset al css de body */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #F3F5FC;
+}
+
+/* tamaño de las secciones */
+
+header {
+    justify-content: flex-start;
+    align-content: center;
+    background-color: #F3F5FC;
+    height: 5%;
+    padding-top: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F3F5FC;
+    height: 79%;
+    padding: 20px 50px;
+}
+
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 120%;
+    border-radius: 1rem;
+}
+
+
+/* áreas de cajas de texto */
+
+#input-text {
+    background-color: #F3F5FC;
+    width: 90%;
+    height: 80%;
+    margin: 10px;
+    padding: 30px;
+    border: none;
+    outline: none;
+    
+    font-family: Inter;
+    color: #0A3871;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+
+    resize: none;
+    text-transform: lowercase;
+}
+
+.container {
+    background-color: #F3F5FC;
+    width: 60%;
+    height: 110%;
+}
+
+.parametros {
+    display: flex;
+    justify-content: left;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    gap: 5px;
+}
+
+.output-container {
+    background-color: #FFFFFF;
+    width: 20%;
+    height: 110%;
+    box-shadow: 5px 5px #d2d2d3;
+    display: flex;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28.8px;
+    text-align: center;
+}
+
+#output-text {
+    display: none;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+
+    width: 90%;
+    height: 80%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    
+    font-family: Inter;
+    color: #0A3871;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+
+    resize: none;
+}
+
+#imagen {
+    width: 220px;
+    margin-top: 120px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    gap: 5px;
+}
+
+/* botones */
+
+button {
+    border: solid #0A3871 2px;
+    border-radius: 1rem;
+    padding: 12px 50px;
+    width: 200px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 50%;
+    padding: 10px;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+    color: #F3F5FC;
+}
+
+.btn-desencriptar {
+    background-color: #F3F5FC;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+    color: #0A3871;
+}
+
+.btn-copiar {
+    display: none;
+    background-color: #FFFFFF;
+    margin-top: 50px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: center;
+    color: #0A3871;
+}
+
+.btn-encriptar:hover {
+    background-color: #0056b3;
+}
+
+.btn-desencriptar:hover {
+    background-color:  #bbc4e6;
+}
+
+.btn-copiar:hover {
+    background-color:  #bbc4e6;
+}
+
+.btn-encriptar:active {
+    background-color: #0A3871;
+}
+
+.btn-desencriptar:active {
+    background-color:   #F3F5FC;
+}
+
+.btn-copiar:active {
+    background-color:  #FFFFFF;
+}
+
+/* responsividad */
+
+/* Móviles */
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .output-container {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    #imagen {
+        width: 150px;
+        margin-top: 50px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+
+    .container {
+        width: 80%;
+        height: auto;
+    }
+
+    .output-container {
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    #imagen {
+        width: 180px;
+        margin-top: 80px;
+    }
+
+    .buttons {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1025px) {
+    main {
+        flex-direction: row;
+        padding: 20px 50px;
+    }
+
+    .container {
+        width: 60%;
+        height: 110%;
+    }
+
+    .output-container {
+        width: 20%;
+        height: 110%;
+    }
+
+    #imagen {
+        width: 220px;
+        margin-top: 120px;
+    }
+
+    .buttons {
+        width: 50%;
+    }
+
+    button {
+        width: 200px;
+    }
+}
